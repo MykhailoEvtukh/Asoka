@@ -14,7 +14,7 @@
 
 $primary-color: #fff;
 $main-color: #252525;
-$secondary-color: #36a727;
+$secondary-color: #20854e;
 $body-font-color: #515151;
 $main-font: 'Source Sans Pro', sans-serif;
 $secondary-font: 'Herr Von Muellerhoff', cursive;
@@ -404,29 +404,7 @@ h5{
     cursor: pointer;
 }
 
-.paragliding-link{
-    position: relative;
-    width: auto;
-    overflow: hidden;
-    cursor: pointer;
-}
 
-.paragliding-link::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 700px;
-    height: 700px;
-    transform: translate(-190%, -50%);
-    background-color: #4b956dc7;
-    border-radius: 50%;
-    transition: 1s;
-}
-
-.paragliding-link:hover:after{
-    transform: translate(-50%, -50%);
-}
 
 .hiking-image{
     position: relative;
@@ -442,8 +420,6 @@ h5{
 }
 
 
-
-
 /* Surfing */
 
 .surfing{
@@ -453,15 +429,45 @@ h5{
     background-attachment: fixed;
 }
 
+// Paragliding
+
+.paragliding-link{
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.paragliding-link::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    transform: translate(-190%, -50%);
+    background-color: #4ab69bbe;
+    border-radius: 50%;
+    transition: 1.2s ease-in-out;
+}
+
+.paragliding-link:hover:after{
+    transform: translate(-50%, -50%);
+}
 
 /* Footer */
 
 footer{
-    padding: 7.9rem 0;
+    width: 100vw;
+    padding: 7.9rem 3rem;
     background-color: $main-color;
     color: $primary-color;
     text-align: center;
     position: relative;
+}
+.footer-container{
+    width: 100vw;
+    padding: 0;
 }
 
 .back-to-top{
@@ -482,6 +488,11 @@ footer{
     font-size: 2.5rem;
     padding: 2rem;
     animation: up 2s infinite;
+}
+
+.footer-content{
+    max-width: 85vw;
+    margin: 0 auto;
 }
 
 .footer-content h4{
@@ -512,9 +523,11 @@ footer{
 }
 
 .social-icons i{
+    width: 30%;
     font-size: 2rem;
     color: $primary-color;
-    padding: 0.8rem 2rem;
+    // padding: 0.8rem 2rem;
+    margin-right: 20px;
     opacity: 0.5;
     transition: color .5s;
 
@@ -649,7 +662,7 @@ footer{
     .newsletter-form{
         width: 100%;
         max-width: 27.3rem;
-        margin: 0 1rem;
+        margin: 0;
     }
 
     .social-icons i{
@@ -657,7 +670,7 @@ footer{
     }
 
     .newsletter-btn{
-        margin-left: 7.5rem;
+        margin-left: 5.5rem;
     }
 }
 
