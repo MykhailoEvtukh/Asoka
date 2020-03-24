@@ -168,13 +168,16 @@ header{
 /* Hero */
 
 .hero{
-    width: 100%;
     height: 100vh;
     background: url(../images/first-section/agriculture-asia-cat-china-235648.jpg) center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     text-align: center;
+}
+
+.first-container{
+    transform: translateY(-40%);
 }
 
 .sub-headline{
