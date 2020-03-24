@@ -396,13 +396,13 @@ h5{
 
 .hiking-image{
     position: relative;
-    transition: transform .6s;
+    transition: transform .6s, box-shadow .6s;
 }
 
 .hiking-image:hover{
     object-fit: cover;
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px 0px #0000004d;
+    box-shadow:  0px 0px 40px 10px #1b8b4033;
 }
 
 
