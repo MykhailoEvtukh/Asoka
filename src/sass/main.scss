@@ -64,7 +64,7 @@ header{
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    background-image: linear-gradient(to bottom, rgba(23, 104, 57, 0.4), transparent);
 }
 
 .nav{
@@ -372,6 +372,9 @@ h5{
 .tours{
     background: url('../images/first-section/woman-soaking-on-the-swimming-pool-3225531.jpg') center no-repeat;
     background-size: cover;
+    min-height: 100%;
+    position: relative;
+    background-attachment: fixed;
 }
 
 .between{
@@ -394,16 +397,51 @@ h5{
     margin-bottom: 0;
 }
 
+.hiking-link{
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.paragliding-link{
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.paragliding-link::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    transform: translate(-190%, -50%);
+    background-color: #4b956dc7;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.paragliding-link:hover:after{
+    transform: translate(-50%, -50%);
+}
+
 .hiking-image{
     position: relative;
-    transition: transform .6s, box-shadow .6s;
+    transition: filter ease-in-out .8s, transform 1s, box-shadow .6s;
+    filter: grayscale(100%);
 }
 
 .hiking-image:hover{
     object-fit: cover;
-    transform: scale(1.05);
+    transform: scale(1.2);
     box-shadow:  0px 0px 40px 10px #1b8b4033;
+    filter: grayscale(0%);
 }
+
+
 
 
 /* Surfing */
@@ -411,6 +449,8 @@ h5{
 .surfing{
     background: url('../images/surfing/close-up-photo-of-person-carrying-surfboard-1753689.jpg') center no-repeat;
     background-size: cover;
+    position: relative;
+    background-attachment: fixed;
 }
 
 
