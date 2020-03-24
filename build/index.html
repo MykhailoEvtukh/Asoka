@@ -6,6 +6,7 @@
     <title>Asoka travels</title>
     <script src="https://kit.fontawesome.com/cfcb584dec.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -229,7 +230,56 @@
         </div>
     </footer>
 
-
-    <script src="./js/index.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+    <script>
+      const selectNode = function(element){
+    return document.querySelector(element);
+    }
+    
+    const refs = {
+        menuToggler : selectNode('.menu-toggle'),
+        body : selectNode('body'),
+        closeIcon : selectNode('.fa-times')
+    }
+    
+    
+    refs.menuToggler.addEventListener('click', function(){
+            refs.body.classList.toggle('open');
+            refs.closeIcon.classList.toggle('close')
+    
+    })
+    
+    // scroll reveal
+    
+    window.sr = ScrollReveal();
+    
+    sr.reveal('.animate-left', {
+        origin: 'left',
+        duration: 1000,
+        distance: '25rem',
+        delay: 300
+    });
+    
+    sr.reveal('.animate-right', {
+        origin: 'right',
+        duration: 1000,
+        distance: '25rem',
+        delay: 600
+    });
+    
+    sr.reveal('.animate-top', {
+        origin: 'top',
+        duration: 1000,
+        distance: '25rem',
+        delay: 600
+    });
+    
+    sr.reveal('.animate-bottom', {
+        origin: 'bottom',
+        duration: 1000,
+        distance: '25rem',
+        delay: 600
+    });
+    </script>
 </body>
 </html>
